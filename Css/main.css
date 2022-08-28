@@ -6,6 +6,7 @@
     --main-color: #2196f3;
     --main-color-alt: #1787e0;
     --secondary-color: #0d1730;
+    --lite-color: #777;
     --header-font-size: 1.8rem;
     --nav-a-font-size: 1.1rem;
     --larger-font-size: 2.5rem;
@@ -329,7 +330,7 @@ a {
 
 .home .container .text p {
     font-size: 1.4rem;
-    color: #777;
+    color: var(--lite-color);
     line-height: 1.6;
     margin: 20px 0 0;
     max-width: 480px;
@@ -424,7 +425,7 @@ a {
 }
 
 .articles .container .box .content p {
-    color: #777;
+    color: var(--lite-color);
     line-height: 1.6;
     margin: 10px 0 0;
 }
@@ -574,7 +575,7 @@ a {
 
 .features .container .box p {
     font-size: 20px;
-    color: #777;
+    color: var(--lite-color);
     line-height: 1.6;
     margin: 30px 0;
     padding: 25px;
@@ -646,6 +647,62 @@ a {
     background: linear-gradient(to right, #03a9f4 50%, #fff 50%);
     background-size: 200% 100%;
     background-position: right bottom;
+}
+
+/*==== Testimonials ====*/
+.testimonials {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    background-color: var(--section-background);
+}
+
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px ,1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+}
+
+.testimonials .container .box {
+    background-color: #fff;
+    position: relative;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 12%);
+}
+
+.testimonials .container .box .image img {
+    position: absolute;
+    right: -10px;
+    top: -50px;
+    width: 100px;
+    background-color: var(--section-background);
+    border: 10px solid var(--section-background);
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.testimonials .container .box h4 {
+    color: var(--main-color);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.testimonials .container .box p:first-of-type {
+    color: var(--lite-color);
+    margin: 10px 0;
+    font-size: var(--smaller-font-size);
+}
+
+.testimonials .container .box .rate .fa-solid {
+    color: #ffc107;
+}
+
+.testimonials .container .box p:last-of-type {
+    color: var(--secondary-color);
+    margin: 10px 0 0;
+    line-height: 1.6;
 }
 
 /*==== Animation ====*/
