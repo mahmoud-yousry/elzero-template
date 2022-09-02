@@ -10,6 +10,7 @@
     --header-font-size: 1.8rem;
     --nav-a-font-size: 1.1rem;
     --larger-font-size: 2.5rem;
+    --large-font-size: 1.4rem;
     --smaller-font-size: 0.95rem;
     --main-transition: 0.4s;
     --section-padding: 100px;
@@ -329,7 +330,7 @@ a {
 }
 
 .home .container .text p {
-    font-size: 1.4rem;
+    font-size: var(--large-font-size);
     color: var(--lite-color);
     line-height: 1.6;
     margin: 20px 0 0;
@@ -584,7 +585,7 @@ a {
 .features .container .box a {
     display: block;
     width: fit-content;
-    font-size: 1.4rem;
+    font-size: var(--large-font-size);
     font-weight: bold;
     margin: 0 auto 30px;
     padding: 10px 30px;
@@ -683,9 +684,8 @@ a {
     max-width: 100%;
 }
 
-.testimonials .container .box h4 {
+.testimonials .container .box h3 {
     color: var(--main-color);
-    font-size: 1.2rem;
     margin: 0;
 }
 
@@ -791,14 +791,14 @@ a {
     padding-left: 80px;
 }
 
-.team .container .box .info h4 {
+.team .container .box .info h3 {
     color: var(--main-color);
-    font-size: 1.3rem;
+    font-size: var(--large-font-size);
     margin-bottom: 0;
     transition: var(--main-transition);
 }
 
-.team .container .box:hover .info h4,
+.team .container .box:hover .info h3,
 .team .container .box:hover .info p {
     color: var(--lite-color);
 }
@@ -806,6 +806,107 @@ a {
 .team .container .box .info p {
     margin: 10px 0 20px;
     transition: var(--main-transition);
+}
+
+/*==== Services ====*/
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+    position: relative;
+}
+
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.services .container .box {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 12%);
+    transition: var(--main-transition);
+    counter-increment: services;
+}
+
+.services .container .box::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+}
+
+.services .container .box:hover::before {
+    width: 100%;
+}
+
+.services .container .box:hover {
+    box-shadow: 
+    0px 12px 20px 0px rgb(0 0 0 / 13%), 
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
+    transform: translateY(-10px);
+}
+
+.services .container .box .content {
+    text-align: center;
+}
+
+.services .container .box .content i {
+    display: block;
+    color: #d5d5d5;
+    margin: 20px auto;
+}
+
+.services .container .box .content h3 {
+    color: var(--main-color);
+    font-size: var(--large-font-size);
+    margin: 0 0 40px;
+}
+
+.services .container .box .info {
+    background-color: #f3f3f3;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.services .container .box .info::before {
+    content: "0" counter(services);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.services .container .box .info::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 50px;
+    height: 100%;
+    background-color: #d5d5d5;
+    transform: skewX(-30deg);
+}
+
+.services .container .box .info a {
+    color: var(--main-color);
 }
 
 /*==== Animation ====*/
