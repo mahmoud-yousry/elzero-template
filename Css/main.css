@@ -909,6 +909,66 @@ a {
     color: var(--main-color);
 }
 
+/*==== Services ====*/
+.skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+.skills .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+    .skills .container img {
+        display: none;
+    }
+}
+
+.skills .container img {
+    max-width: 100%;
+}
+
+.skills .container .our_skills {
+    flex: 1;
+}
+
+.skills .container .our_skills .prog_holder {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.skills .container .our_skills .prog_holder h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills .container .our_skills .prog_holder h3 span::before {
+    content: attr(data-progress);
+    padding: 0 5px;
+    font-size: 0.8rem;
+    color: var(--main-color);
+    border: 1px solid var(--lite-border-color);
+    border-radius: 6px;
+}
+
+.skills .container .our_skills .prog_holder .progress {
+    height: 30px;
+    background-color: #eee;
+    position: relative;
+}
+
+.skills .container .our_skills .prog_holder .progress span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
 /*==== Animation ====*/
 @keyframes up-and-down {
     0%, 
