@@ -909,7 +909,7 @@ a {
     color: var(--main-color);
 }
 
-/*==== Services ====*/
+/*==== Skills ====*/
 .skills {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
@@ -918,12 +918,16 @@ a {
 
 .skills .container {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px;
 }
 
 @media (max-width: 991px) {
+    .skills .container {
+        flex-direction: column;
+    }
     .skills .container img {
-        display: none;
+        align-items: center;
     }
 }
 
@@ -1047,6 +1051,141 @@ a {
     line-height: 1.8;
     font-size: 1.1rem;
     margin: 10px 0 0;
+}
+
+/*==== Events ====*/
+.events {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+.events .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+@media (max-width: 991px) {
+    .events .container {
+        flex-direction: column;
+    }
+}
+
+.events .container img {
+    width: 450px;
+    max-width: 100%;
+}
+
+.events .container .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.events .container .content .time {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+}
+
+.events .container .content .time .unit {
+    border: 1px solid var(--lite-border-color);
+    border-radius: 6px;
+    transition: var(--main-transition);
+}
+
+.events .container .content .time .unit:hover,
+.events .container .content .time .unit:hover div {
+    border-color: var(--main-color);
+}
+
+.events .container .content .time .unit span {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--main-color);
+    padding: 15px;
+}
+
+.events .container .content .time .unit div {
+    border-top: 1px solid var(--lite-border-color);
+    padding: 7px;
+    font-size: 0.85rem;
+    transition: var(--main-transition);
+}
+
+.events .container .content .text {
+    text-align: center;
+}
+
+.events .container .content .text h3 {
+    font-size: var(--header-font-size);
+    margin: 0;
+}
+
+.events .container .content .text p {
+    text-align: center;
+    font-size: 1.16rem;
+    color: var(--lite-color);
+    line-height: 1.6;
+    margin: 15px 0 0;
+}
+
+.events .container .subscribe {
+    width: 100%;
+}
+
+.events .container .subscribe form {
+    width: 600px;
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    background-color: #f6f5f5;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .events .container .subscribe form {
+        flex-direction: column;
+        max-width: 100%;
+        border-radius: 6px;
+        padding: 20px;
+    }
+}
+
+.events .container .subscribe form input[type="email"] {
+    flex: 1;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    caret-color: var(--main-color);
+}
+
+.events .container .subscribe form input[type="email"]:focus::placeholder {
+    opacity: 0;
+    transition: var(--main-transition);
+}
+
+.events .container .subscribe form input[type="submit"] {
+    color: #fff;
+    font-weight: bold;
+    background-color: var(--main-color);
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.events .container .subscribe form input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
 }
 
 /*==== Animation ====*/
