@@ -5,7 +5,7 @@
 :root {
     --main-color: #2196f3;
     --main-color-alt: #1787e0;
-    --secondary-color: #0d1730;
+    --secondary-color: black;
     --lite-color: #777;
     --header-font-size: 1.8rem;
     --nav-a-font-size: 1.1rem;
@@ -1350,6 +1350,85 @@ a {
 .pricing .container .dots_down {
     bottom: 200px;
     left: 0;
+}
+
+/*==== Videos ====*/
+.videos {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+.videos .container .holder {
+    display: flex;
+    border: 1px solid var(--lite-border-color);
+    background-color: var(--section-background);
+}
+
+@media (max-width: 991px) {
+    .videos .container .holder {
+        flex-direction: column;
+    }
+}
+
+.videos .container .holder .list {
+    flex-basis: 30%;
+    background-color: #fff;
+}
+
+.videos .container .holder .list .title {
+    color: var(--main-color);
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.videos .container .holder .list .title h3 {
+    font-size: 1.05rem;
+    margin: 0;
+    cursor: pointer;
+}
+
+.videos .container .holder .list .title i {
+    cursor: pointer;
+}
+
+.videos .container .holder .list ul li {
+    padding: 20px;
+    border-bottom: 1px solid var(--lite-border-color);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.videos .container .holder .list ul li:hover {
+    color: var(--main-color);
+}
+
+.videos .container .holder .list ul li .time {
+    display: block;
+    color: var(--lite-color);
+    margin-top: 10px;
+}
+
+.videos .container .holder .preview {
+    padding: 10px;
+    background-color: #e2e2e2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.videos .container .holder .preview .video {
+    max-width: 100%;
+}
+
+.videos .container .holder .preview .title {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 10px;
+    width: 100%;
 }
 
 /*==== Animation ====*/

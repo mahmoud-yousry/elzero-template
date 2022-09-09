@@ -1,4 +1,4 @@
 # Elzero Template
-- Template three assignment for Elzero Web School "convert PSD file to HTML and CSS project"
+- Template three assignment for Elzero Web School "convert PSD file to HTML and CSS design"
 
-![Template Image](template-3-demo.jpg)
+![Template Image](preview.jpg)
